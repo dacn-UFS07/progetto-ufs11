@@ -1,0 +1,9 @@
+.card-container {
+    width: 64%;
+    margin: auto;
+}
+
+.card {
+    margin-left: 4%;
+    margin-right: 4%;
+}

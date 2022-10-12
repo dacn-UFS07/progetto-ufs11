@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProdottiComponent } from './prodotti/prodotti.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdottiComponent
+    ProdottiComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
