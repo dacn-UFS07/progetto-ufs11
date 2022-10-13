@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavbarService } from '../shared/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  badgeNumbersAddedToCart = 0; 
+
+  constructor(private sharedBadgeNumbersAddedToCart: NavbarService) { }
 
   ngOnInit(): void {
+    this.sharedBadgeNumbersAddedToCart.setBadgeNumbersAddedToCart(this.badgeNumbersAddedToCart)
+  }
+
+  getBadgeNumbersAddedToCart() {
+    return this.sharedBadgeNumbersAddedToCart.getBadgeNumbersAddedToCart()
   }
 
 }
