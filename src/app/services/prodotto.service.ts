@@ -15,6 +15,7 @@ export class ProdottoService {
     {codice:"006",nome:"prodotto 6", categoria:1, slug:"prod6",prezzo:250,foto:""},
   ]
 
+
   constructor() { }
 
   get prodotti() {

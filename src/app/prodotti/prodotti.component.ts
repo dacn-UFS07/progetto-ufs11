@@ -20,7 +20,7 @@ export class ProdottiComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAggiungiACarrello() {
+  onIncreaseBadgeNumber() {
     this.sharedBadgeNumbersAddedToCart.setBadgeNumbersAddedToCart(this.sharedBadgeNumbersAddedToCart.getBadgeNumbersAddedToCart() +1)
   }
 
