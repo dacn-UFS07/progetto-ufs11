@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Prodotto } from '../models/prodotto.model';
 import { ProdottoService } from '../services/prodotto.service';
 import { NavbarService } from '../shared/navbar.service';
+import { CarrelloService } from '../services/carrello.service';
 
 @Component({
   selector: 'app-prodotti',
@@ -13,7 +14,7 @@ export class ProdottiComponent implements OnInit {
   prodotti :Prodotto[] = []
   badgeNumbersAddedToCart:any
 
-  constructor(private prodottoService :ProdottoService, private sharedBadgeNumbersAddedToCart: NavbarService) {
+  constructor(private cartService: CarrelloService, private prodottoService :ProdottoService, private sharedBadgeNumbersAddedToCart: NavbarService) {
     this.prodotti = this.prodottoService.prodotti
    }
 
@@ -22,6 +23,10 @@ export class ProdottiComponent implements OnInit {
 
   onIncreaseBadgeNumber() {
     this.sharedBadgeNumbersAddedToCart.setBadgeNumbersAddedToCart(this.sharedBadgeNumbersAddedToCart.getBadgeNumbersAddedToCart() +1)
+  }
+
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
   }
 
 }

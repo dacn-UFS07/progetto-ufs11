@@ -6,7 +6,16 @@ import { Prodotto } from '../models/prodotto.model';
 })
 export class CarrelloService {
 
-  private _carrello :Prodotto[] = []
+  private cartItems :Prodotto[] = []
 
   constructor() { }
+
+  addToCart(product: Prodotto) {
+    this.cartItems.push(product);
+  }
+
+  getItems() {
+    return this.cartItems;
+  }
+
 }
