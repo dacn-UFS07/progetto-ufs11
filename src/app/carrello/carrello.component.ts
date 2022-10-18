@@ -15,4 +15,8 @@ export class CarrelloComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clearCart(){
+    this.cartItems = this.cartService.clearCart();
+  }
+
 }

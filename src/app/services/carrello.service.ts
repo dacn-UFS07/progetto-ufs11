@@ -14,6 +14,11 @@ export class CarrelloService {
     this.cartItems.push(product);
   }
 
+  clearCart() {
+    this.cartItems = [];
+    return this.cartItems;
+  }
+
   getItems() {
     return this.cartItems;
   }
